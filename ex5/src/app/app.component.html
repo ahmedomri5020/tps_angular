@@ -1,0 +1,23 @@
+<div>
+  <span class="text-success">{{ title }} is running!</span><br>
+  <input type="text" class="form-control" [(ngModel)]="_notes"><br>
+  <button class="btn btn-primary" (click)="addNote()">Add</button><br/>
+  <button class="btn btn-primary" (click)="getNotes()">Liste</button><br/>
+  <button class="btn btn-primary" (click)="ajoutsousliste()">Ajout</button>
+</div>
+
+<ul>
+  <li class="text-primary" *ngFor="let n of notes; let i = index">
+    {{ n }}
+    <button class="btn-close " style="background-color: red;" (click)="deleteNote(i)">Close</button>
+    
+    <ul>
+      <li class="text-primary" *ngFor="let s of getSubNotes(i); let j = index">
+        {{ s }}
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+
