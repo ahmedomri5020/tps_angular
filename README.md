@@ -1,2 +1,1 @@
-"# Angular-tps" 
-"# tps_angular" 
+"# TpsAngular" 
